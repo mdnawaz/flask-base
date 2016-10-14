@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>
+		LOGIN
+	</title>
+</head>
+<body>
+	<h1>
+		LOGIN
+	</h1>
+	<form method="POST" action="/login">
+		<input type="text" placeholder="username" name="uname">
+		<input type="password" placeholder="password" name="password">
+		<input type="submit" value="Login!" name="login">
+
+	</form>
+
+	{% for msg in get_flashed_messages() %}
+		{{ msg }} <br>
+	{% endfor %}
+</body>
+</html>

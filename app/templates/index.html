@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>
+		Index Page
+	</title>
+</head>
+<body>
+	<h1>
+	Posts
+	</h1>
+
+	{% for item in post %}
+
+	{{ item.title }}
+	<br>
+	{{ item.body }}
+
+	{% endfor %}
+
+	<br>
+
+	{% for msg in get_flashed_messages() %}
+			{{ msg }} <br>
+		{% endfor %}
+
+	<a href="{{ url_for('logout') }}">Logout</a>
+
+</body>
+</html>
